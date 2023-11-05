@@ -5,9 +5,9 @@
 IPv6 Maintenance                                                   C. Li
 Internet-Draft                                               H. Shi, Ed.
 Intended status: Standards Track                                M. Zhang
-Expires: 6 November 2023                                         X. Ding
+Expires: 8 May 2024                                              X. Ding
                                                      Huawei Technologies
-                                                              5 May 2023
+                                                         5 November 2023
 
 
             IP Payload Compression excluding transport layer
@@ -16,9 +16,9 @@ Expires: 6 November 2023                                         X. Ding
 Abstract
 
    IP Payload Compression Protocol (IPComp) is used for compressing the
-   IP payload in transmission to increase the communication performance.
-   The IPComp is applied to payload of the IP datagram, starting with
-   the first octet immediately after the IP header in IPv4, and the
+   IP payload in transmission to increase communication performance.
+   The IPComp is applied to the payload of the IP datagram, starting
+   with the first octet immediately after the IP header in IPv4, and the
    first octet after the excluded IPv6 Extension headers.  However,
    transport layer information such as source port and destination port
    are useful in many network functions in transmission.
@@ -64,7 +64,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 November 2023.
+   This Internet-Draft will expire on 8 May 2024.
 
 Copyright Notice
 
