@@ -3,21 +3,21 @@ title: "IP Payload Compression excluding transport layer"
 abbrev: "IPComp excluding L4"
 category: std
 
-docname: draft-ls-6man-ipcomp-exclude-transport-layer-latest
+docname: draft-ls-ipsecme-ipcomp-exclude-transport-layer-lastest
 submissiontype: IETF  # also: "independent", "IAB", or "IRTF"
 number:
 date:
 consensus: true
 v: 3
 area: "Internet"
-workgroup: "IPv6 Maintenance"
+workgroup: "IP Security Maintenance and Extensions"
 keyword:
  - next generation
 venue:
-  group: "IPv6 Maintenance"
+  group: "IP Security Maintenance and Extensions"
   type: "Working Group"
-  mail: "ipv6@ietf.org"
-  arch: "https://mailarchive.ietf.org/arch/browse/ipv6/"
+  mail: "ipsec@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/ipsec/"
   github: "VMatrix1900/ipcomp-exclude-transport-layer"
   latest: "https://VMatrix1900.github.io/ipcomp-exclude-transport-layer/draft-ls-6man-ipcomp-exclude-transport-layer.html"
 
@@ -96,11 +96,9 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 Currently, the IPComp will compress all the IP payload which includes the transport layer information. If a layer 4 load balancer is deployed along the IPComp packet delivery path, then the load balancer can not obtain the source port and destination port to identify a flow without decompressing it first. In other words, the network functions which requires the transport layer information would also need to act as the decompression node of IPComp. This incompatibility makes the deployment of IPComp harder.
 
-
 # Extensions to IPComp
 
 This section defines two extensions of IPComp. The first extension is used to indicate the first four bytes of transport layer header which contains the source port and destination is excluded from the compression. The second extension indicates that the payload is not compressed.
-
 
 ## Four-bytes Exclusion Extension
 This extension is used to indicate that the first four bytes of the transport layer header is excluded from the compression. The packet format using this extension is shown in {{IPComp-exclusion-layout}}(Demonstrated using IPv6 packet):
@@ -165,10 +163,9 @@ Currently, if the total size of a compressed payload and the IPComp header is no
 
 To solve the out-of-order packets within the same IPComp-enabled flow, we propose to add IPComp header no matter whether the packet within the IPComp-enabled flow is sent compressed or not. To indicate a packet is sent uncompressed, a new CPI value(TBD) is used. In this way, since all packets within the IPComp-enabled flow have IPComp header, they will go through the same process path and be processed in order. For uncompressed packet, the Next Header in the IPComp Header is copied into the Next Header in the IP header, and the IPComp Header is removed.
 
-
 # IANA Considerations
 
-TBD.
+This document require to add new CPI values in [IKEv2 Notification IPCOMP Transform IDs (Value 16387)](https://www.iana.org/assignments/ikev2-parameters/ikev2-parameters.xhtml).
 
 # Security Considerations
 
