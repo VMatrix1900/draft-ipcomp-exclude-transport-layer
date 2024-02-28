@@ -3,7 +3,7 @@ title: "IP Payload Compression excluding transport layer"
 abbrev: "IPComp excluding L4"
 category: std
 
-docname: draft-ls-ipsecme-ipcomp-exclude-transport-layer-lastest
+docname: draft-ls-ipsecme-ipcomp-exclude-transport-layer-latest
 submissiontype: IETF  # also: "independent", "IAB", or "IRTF"
 number:
 date:
