@@ -2,16 +2,16 @@
 
 
 
-IPv6 Maintenance                                                   C. Li
+IP Security Maintenance and Extensions                             C. Li
 Internet-Draft                                               H. Shi, Ed.
 Intended status: Standards Track                                M. Zhang
-Expires: 8 May 2024                                              X. Ding
+Expires: 31 August 2024                                          X. Ding
                                                      Huawei Technologies
-                                                         5 November 2023
+                                                        28 February 2024
 
 
             IP Payload Compression excluding transport layer
-          draft-ls-6man-ipcomp-exclude-transport-layer-latest
+         draft-ls-ipsecme-ipcomp-exclude-transport-layer-latest
 
 Abstract
 
@@ -39,12 +39,13 @@ About This Document
    https://VMatrix1900.github.io/ipcomp-exclude-transport-layer/draft-
    ls-6man-ipcomp-exclude-transport-layer.html.  Status information for
    this document may be found at https://datatracker.ietf.org/doc/draft-
-   ls-6man-ipcomp-exclude-transport-layer/.
+   ls-ipsecme-ipcomp-exclude-transport-layer/.
 
-   Discussion of this document takes place on the IPv6 Maintenance
-   Working Group mailing list (mailto:ipv6@ietf.org), which is archived
-   at https://mailarchive.ietf.org/arch/browse/ipv6/.  Subscribe at
-   https://www.ietf.org/mailman/listinfo/ipv6/.
+   Discussion of this document takes place on the IP Security
+   Maintenance and Extensions Working Group mailing list
+   (mailto:ipsec@ietf.org), which is archived at
+   https://mailarchive.ietf.org/arch/browse/ipsec/.  Subscribe at
+   https://www.ietf.org/mailman/listinfo/ipsec/.
 
    Source for this draft and an issue tracker can be found at
    https://github.com/VMatrix1900/ipcomp-exclude-transport-layer.
@@ -64,11 +65,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 May 2024.
+   This Internet-Draft will expire on 31 August 2024.
 
 Copyright Notice
 
-   Copyright (c) 2023 IETF Trust and the persons identified as the
+   Copyright (c) 2024 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -274,7 +275,9 @@ Table of Contents
 
 5.  IANA Considerations
 
-   TBD.
+   This document require to add new CPI values in IKEv2 Notification
+   IPCOMP Transform IDs (Value 16387) (https://www.iana.org/assignments/
+   ikev2-parameters/ikev2-parameters.xhtml).
 
 6.  Security Considerations
 
